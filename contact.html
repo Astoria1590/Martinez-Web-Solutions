@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Martinez Web Solutions for inquiries, estimates, or support." />
+  <meta name="keywords" content="contact, web developer, Martinez Web Solutions, support" />
+  <meta name="author" content="Martinez Web Solutions" />
+  <title>Contact | Martinez Web Solutions</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<nav class="navbar">
+  <a href="index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+    <img src="https://res.cloudinary.com/dbeifkzba/image/upload/v1750435760/Tech_Business_Logo_with_Blue_and_Teal_Colors_1_pmrsd5.png" alt="Martinez Web Solutions Logo" />
+    <span style="color: inherit;">Martinez Web Solutions</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="packages.html">Packages</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+
+<body>
+  <header class="contact-hero">
+    <video autoplay muted loop class="bg-video">
+      <source src="video/contact-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay">
+      <h1>Contact Me</h1>
+      <p>Let’s bring your vision to life. I typically respond within 72 hours.</p>
+    </div>
+  </header>
+
+  <main class="contact-container">
+    <form action="#" method="post" class="contact-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="reason">Reason for Contact</label>
+      <select id="reason" name="reason" required>
+        <option value="">-- Select a reason --</option>
+        <option value="quote">Request a Quote</option>
+        <option value="support">Website Support</option>
+        <option value="feedback">Feedback on Services</option>
+        <option value="collaboration">Business Collaboration</option>
+        <option value="other">Other (please describe)</option>
+      </select>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <p class="disclaimer">Please allow up to 72 hours for a response. Thank you for your patience!</p>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Martinez Web Solutions. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

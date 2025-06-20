@@ -1,0 +1,100 @@
+/* === Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.projects-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.projects-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.projects-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideIn 1s forwards ease;
+}
+
+.project-card h2 {
+  color: #00e6e6;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  color: #ddd;
+}
+
+/* Animations */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.delay-3 {
+  animation-delay: 0.9s;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .projects-header h1 {
+    font-size: 2rem;
+  }
+
+  .projects-header p {
+    font-size: 1rem;
+  }
+
+  .projects-grid {
+    padding: 2rem 1rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional freelance web developer specializing in modern, responsive, and high-performance websites." />
+  <meta name="keywords" content="web development, freelance developer, responsive websites, HTML, CSS, JavaScript, SEO" />
+  <meta name="author" content="Martinez Web Solutions" />
+  <title>Martinez Web Solutions | Freelance Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+  <a href="index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+    <img src="https://res.cloudinary.com/dbeifkzba/image/upload/v1750435760/Tech_Business_Logo_with_Blue_and_Teal_Colors_1_pmrsd5.png" alt="Martinez Web Solutions Logo" />
+    <span style="color: inherit;">Martinez Web Solutions</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="packages.html">Packages</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+
+    <div class="hero-section">
+      <video autoplay muted loop id="bg-video">
+        <source src="https://res.cloudinary.com/dbeifkzba/video/upload/v1750436854/3125427-uhd_3840_2160_25fps_tkuag0.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay">
+        <div class="content">
+          <h1>Build with Brilliance</h1>
+          <p>Your future-ready website starts here.</p>
+          <a href="services.html" class="cta-button">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="services" class="section">
+      <h2>What I Offer</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Responsive Design</h3>
+          <p>Optimized for all devices with fluid layouts and mobile-first CSS.</p>
+        </div>
+        <div class="card">
+          <h3>Custom Development</h3>
+          <p>From scratch coding to fit your exact needs and brand identity.</p>
+        </div>
+        <div class="card">
+          <h3>SEO Optimization</h3>
+          <p>High-ranking SEO practices embedded right into the structure.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="section">
+      <h2>Choose a Web Package</h2>
+      <p>Select from beginner to enterprise packages tailored to your business needs.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Starter Package</h3>
+          <p>Perfect for personal brands and startups.</p>
+          <ul>
+            <li>3 Pages (Home, About, Contact)</li>
+            <li>Mobile Responsive Design</li>
+            <li>Basic SEO</li>
+            <li>Delivery: 1 Week</li>
+            <li>Price: $799 (Ohio)</li>
+          </ul>
+          <a href="packages.html" class="cta-button">View Packages</a>
+        </div>
+        <div class="card">
+          <h3>Business Package</h3>
+          <p>For small to medium-sized businesses.</p>
+          <ul>
+            <li>Up to 6 Pages</li>
+            <li>Contact Forms & Analytics</li>
+            <li>Advanced SEO Setup</li>
+            <li>Delivery: 10 Days</li>
+            <li>Price: $1299 (Ohio)</li>
+          </ul>
+          <a href="packages.html" class="cta-button">View Packages</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <h2>Portfolio</h2>
+      <p>Check out some of my recent work.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>New Faith Ministries</h3>
+          <p>A modern church website featuring events, donations, and sermons.</p>
+          <a href="https://www.newfaithministriesorg.faith" target="_blank" class="cta-button">View Live Site</a>
+        </div>
+        <div class="card">
+          <h3>My Background</h3>
+          <p>I hold an Associate's Degree in Computer Science from SUNY Cobleskill and specialize in responsive, SEO-focused development.</p>
+          <a href="portfolio.html" class="cta-button">More About Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Let’s Work Together</h2>
+      <form action="mailto:astoria0951@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number (Optional)" />
+        <select name="reason" required>
+          <option value="">-- Select a reason --</option>
+          <option value="quote">Request a Quote</option>
+          <option value="support">Website Support</option>
+          <option value="feedback">Feedback on Services</option>
+          <option value="collaboration">Business Collaboration</option>
+          <option value="other">Other (please describe)</option>
+        </select>
+        <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+        <label for="file">Attach a File (Optional):</label>
+        <input type="file" name="file" id="file" />
+        <p class="disclaimer">Please allow up to 72 hours for a response. Thank you for your patience!</p>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Martinez Web Solutions | All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>

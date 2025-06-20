@@ -1,0 +1,151 @@
+/* Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.3);
+}
+
+.portfolio-hero {
+  position: relative;
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.portfolio-content {
+  padding: 7rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.bio-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  animation: slideUp 1.2s forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.profile-photo {
+  max-width: 280px;
+  border-radius: 50%;
+  border: 3px solid #00e6ff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.bio-text {
+  max-width: 800px;
+  font-size: 1.2rem;
+}
+
+.bio-text h2 {
+  color: #00e6ff;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.project-highlight {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeIn 1.2s forwards;
+  opacity: 0;
+}
+
+.project-highlight h2 {
+  color: #00e6ff;
+  margin-bottom: 1rem;
+}
+
+.project-highlight p {
+  color: #ddd;
+  margin-bottom: 1.5rem;
+}
+
+.view-project {
+  background: #00e6ff;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.view-project:hover {
+  background: #00bcd4;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .bio-section {
+    flex-direction: column;
+  }
+
+  .portfolio-content {
+    padding: 2rem 1rem;
+  }
+
+  .bio-text h2 {
+    font-size: 1.5rem;
+  }
+}

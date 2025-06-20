@@ -1,0 +1,132 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.3);
+}
+
+.contact-hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  color: #00e6ff;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.contact-form input[type="file"] {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  color: #ccc;
+  border: 1px dashed #00e6ff;
+  cursor: pointer;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  background: #00e6ff;
+  color: #000;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #00bcd4;
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .contact-container {
+    padding: 2rem 1rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website development packages by Martinez Web Solutions with detailed pricing, features, and Stripe integration.">
+  <meta name="keywords" content="website packages, web development pricing Ohio, Stripe checkout, Martinez Web Solutions">
+  <meta name="author" content="Martinez Web Solutions">
+  <title>Packages | Martinez Web Solutions</title>
+  <link rel="stylesheet" href="packages.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<nav class="navbar">
+  <a href="index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+    <img src="https://res.cloudinary.com/dbeifkzba/image/upload/v1750435760/Tech_Business_Logo_with_Blue_and_Teal_Colors_1_pmrsd5.png" alt="Martinez Web Solutions Logo" />
+    <span style="color: inherit;">Martinez Web Solutions</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="packages.html">Packages</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+
+<body>
+  <header class="packages-hero">
+    <video autoplay muted loop class="bg-video">
+      <source src="https://res.cloudinary.com/dbeifkzba/video/upload/v1750440519/2887463-hd_1920_1080_25fps_yeej2e.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <h1>Website Packages</h1>
+      <p>Clear, affordable pricing for every stage of your business — Ohio-based rates.</p>
+    </div>
+  </header>
+
+  <main class="package-container">
+    <section class="package-card fade-in">
+      <h2>Starter Package</h2>
+      <p class="price">$799 (one-time)</p>
+      <ul>
+        <li>1-page landing site</li>
+        <li>Responsive mobile design</li>
+        <li>Custom branding (logo, colors)</li>
+        <li>Basic SEO setup</li>
+        <li>SSL Security & Hosting Setup</li>
+        <li>Turnaround: 7 days</li>
+      </ul>
+      <button class="stripe-button" data-price="799">Buy Now</button>
+    </section>
+
+    <section class="package-card fade-in delay-1">
+      <h2>Business Package</h2>
+      <p class="price">$1,499 (one-time)</p>
+      <ul>
+        <li>Up to 5 pages (Home, About, Services, Contact, etc.)</li>
+        <li>Responsive design + animations</li>
+        <li>SEO + Google indexing</li>
+        <li>Contact forms + email integration</li>
+        <li>Blog or CMS setup (WordPress or custom)</li>
+        <li>Turnaround: 10–14 days</li>
+      </ul>
+      <button class="stripe-button" data-price="1499">Buy Now</button>
+    </section>
+
+    <section class="package-card fade-in delay-2">
+      <h2>Pro/E-Commerce Package</h2>
+      <p class="price">$2,499+</p>
+      <ul>
+        <li>10+ pages + product listings</li>
+        <li>Custom checkout system (Stripe or Shopify)</li>
+        <li>Advanced SEO & speed optimization</li>
+        <li>Inventory management integration</li>
+        <li>Analytics & user behavior tools</li>
+        <li>Turnaround: 21–30 days</li>
+      </ul>
+      <button class="stripe-button" data-price="2499">Buy Now</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Martinez Web Solutions | All rights reserved.</p>
+  </footer>
+
+  <script>
+    const stripe = Stripe('pk_test_yourStripePublicKeyHere');
+
+    document.querySelectorAll('.stripe-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const price = button.getAttribute('data-price');
+        fetch('/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ price: price })
+        })
+          .then(res => res.json())
+          .then(session => {
+            return stripe.redirectToCheckout({ sessionId: session.id });
+          })
+          .catch(error => console.error('Stripe checkout error:', error));
+      });
+    });
+  </script>
+</body>
+
+</html>
