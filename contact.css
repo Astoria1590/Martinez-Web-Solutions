@@ -79,7 +79,7 @@ body {
 .contact-form input[type="file"] {
   padding: 0.5rem;
   background: rgba(255, 255, 255, 0.07);
-  color: #ccc;
+  color: #000000;
   border: 1px dashed #00e6ff;
   cursor: pointer;
 }
