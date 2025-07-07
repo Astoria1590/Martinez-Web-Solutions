@@ -52,6 +52,7 @@ body {
   justify-content: center;
   gap: 2rem;
   padding: 3rem 2rem;
+  align-items: stretch; /* ensure all cards same height */
 }
 
 .package-card {
@@ -66,6 +67,11 @@ body {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 1s forwards;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* push button to bottom */
+  height: 100%; /* allow flexible height */
 }
 
 .package-card:hover {
@@ -90,10 +96,15 @@ body {
   margin-top: 1rem;
   line-height: 1.8;
   color: #ddd;
+  flex-grow: 1; /* let list take available vertical space */
 }
 
 .stripe-button {
-  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* existing styles */
+  margin-top: auto;
   padding: 0.8rem 1.5rem;
   background: #00e6ff;
   border: none;
@@ -102,7 +113,10 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
+  align-self: center;
+  min-width: 140px;
 }
+
 
 .stripe-button:hover {
   background: #00bcd4;
