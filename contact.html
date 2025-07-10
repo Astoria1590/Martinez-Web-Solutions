@@ -10,7 +10,7 @@
   <title>Contact | Martinez Web Solutions</title>
   <link rel="stylesheet" href="contact.css" />
   <link rel="stylesheet" href="style.css" />
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 </head>
 
 <body>
@@ -41,6 +41,7 @@
   </header>
 
   <main class="contact-container">
+    <!-- Secure AJAX Formspree form -->
     <form id="contactForm" class="contact-form">
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required />
@@ -67,6 +68,13 @@
       <p class="disclaimer">Please allow up to 72 hours for a response. Thank you for your patience!</p>
       <button type="submit">Send Message</button>
     </form>
+
+    <!-- Plain mailto link instead of insecure mailto form -->
+    <section style="margin-top:2rem; font-size:1rem;">
+      <p>Or send an email directly at: 
+        <a href="mailto:astoria0951@gmail.com">astoria0951@gmail.com</a>
+      </p>
+    </section>
 
     <p id="form-status" class="form-status"></p>
   </main>
